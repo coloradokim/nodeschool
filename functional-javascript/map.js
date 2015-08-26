@@ -1,12 +1,20 @@
-function doubleAll(numbers) {
-  var result = []
-  numbers.map(function(num){
-    result.push(num * 2)
+    //
+    // function doubleAll(numbers) {
+    //   return numbers.map(function (num) {
+    //     return num * 2
+    //   })
+    // }
+    //
+    //
+    // module.exports = doubleAll
+
+
+var arr = [1,2,3,4,5]
+
+function arrMap(array) {
+  console.log(array);
+  var newArr = array.map(function(item){
+    return item + 2
   })
-  return result
-};
-
-
-
-
-   module.exports = doubleAll
+  console.log(newArr);
+}

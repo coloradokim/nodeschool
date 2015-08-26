@@ -1,18 +1,11 @@
-// var names = ['Tara', 'Alley', 'Ryne'];
-// var addHello = names.map(function(element) {
-//   return 'Hello ' + element + '!' ;
-// });
-//
-// console.log(names);
-// console.log(addHello);
+var arr = [1,2,3,4,5]
 
-var str = 'palindrome';
-[].map.call(str, function(x) {
-  return x;
-}).reverse().join('');
+function arrMap(array) {
+  console.log(array);
+  var newArr = array.map(function(item){
+    return item + 2
+  })
+  console.log(newArr);
+}
 
-console.log([]);
-
-
-// Output: '54321'
-// Bonus: use '===' to test if original string was a palindrome
+arrMap(arr)
