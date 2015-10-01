@@ -1,11 +1,22 @@
-var arr = [1,2,3,4,5]
+var A = [1,2,-1,4,3]
 
-function arrMap(array) {
-  console.log(array);
-  var newArr = array.map(function(item){
-    return item + 2
+function solution(A) {
+    A.forEach(function(el, index) {
+    if (el === -1) {
+      A.splice(index, 1)
+    }
   })
-  console.log(newArr);
+  return A.length
 }
 
-arrMap(arr)
+
+console.log(solution(A));
+
+
+// function getShortMessages(messages) {
+//    var msg = messages.filter(function(object) {
+//     return object.message.length < 50
+//    }).map(function(obj) {
+//      return obj.message
+//    })
+//  }

@@ -1,20 +1,17 @@
-    //
-    // function doubleAll(numbers) {
-    //   return numbers.map(function (num) {
-    //     return num * 2
-    //   })
-    // }
-    //
-    //
-    // module.exports = doubleAll
+// convert for loop to a function using map
+// function doubleAll(numbers) {
+//    var result = []
+//    for (var i = 0; i < numbers.length; i++) {
+//      result.push(numbers[i] * 2)
+//    }
+//    return result
+//  }
 
+ function doubleAll(arr) {
+   var newArr = arr.map(function(el) {
+     return el * 2
+   })
+   return newArr
+ }
 
-var arr = [1,2,3,4,5]
-
-function arrMap(array) {
-  console.log(array);
-  var newArr = array.map(function(item){
-    return item + 2
-  })
-  console.log(newArr);
-}
+ module.exports = doubleAll
