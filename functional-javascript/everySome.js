@@ -1,14 +1,19 @@
-function checkUsersValid(goodUsers) {
-  return function(submittedUsers) {
-    return submittedUsers.every(function(submit) {
-    	return goodUsers.some(function(good) {
-    		return good.id === submit.id;
-    	})
-    })
-  };
-}
+// Return a function that takes a list of valid users,
+// and returns a function that returns true if all of the supplied users exist in the original list of users.
+// You only need to check that the ids match.
 
-module.exports = checkUsersValid
+   function checkUsersValid(goodUsers) {
+     return function(submittedUsers) {
+       return submittedUsers.every(function(submit) {
+       	return goodUsers.some(function(good) {
+       		return good.id === submit.id;
+       	})
+       })
+     };
+   }
+
+   module.exports = checkUsersValid
+
 
 
 //
